@@ -87,9 +87,10 @@ $templates = $db->loadAssocList();
 <h2>Schritt 3</h2>
 
 <p>Hier kannst du die Attribute deines Charakters festlegen.</p>
-<p>Unterhalb kannst du ein Attributpaket auswählen. Diese Pakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Beispielsweise benötigen Druiden 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Bitte ändere die bestehenden Pakete bei Bedarf, aber achte darauf, dass du nicht zu weit von deiner eigentlich gewünschten Charakterrolle abkommst. Bewege deine Maus über ein Attribut, um einen Hilfetext anzuzeigen.</p>
+<p>Die Attributpakete geben einen Überblick über die Anforderungen der verschiedenen Rollen. Bitte ändere die bestehenden Pakete bei Bedarf um sie deiner gewünschten Charakterrolle anzupassen. Druiden benötigen derzeit 30 Punkte aufgeteilt auf Wahrnehmung, Essenz und Intelligenz. Magier benötigen derzeit 30 Punkte aufgeteilt auf Intelligenz, Essenz und Willensstärke.</p>
+<p>Bewege deine Maus über ein Attribut, um einen Hilfetext anzuzeigen.</p>
 <div>
-	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
+	<form action="<?php echo Page::getURL(); ?>/community/account/de_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
 			<h2>Attribute</h2>
 
@@ -126,7 +127,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die körperliche Widerstandsfähigkeit deines Charakters. Sie bestimmt die Erholungsgeschwindigkeit. Dieses Attribut ist für alle Sammler wichtig und hilft auch Kämpfern, Schaden abzuwenden. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Kräuterkunde, Bergbau, Fischen, Ziegel brennen, Ackerbau und Holzfällen.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="Die körperliche Widerstandsfähigkeit deines Charakters. Sie bestimmt die Erholungsgeschwindigkeit der Trefferpunkte. Dieses Attribut ist für alle Sammler wichtig und hilft auch Kämpfern, Schaden abzuwenden. Ausdauer beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Kräuterkunde, Bergbau, Fischen, Holzfällen, Graben, Gerben und Weben, Ackerbau und Landwirtschaft.">Ausdauer</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -134,7 +135,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Koordinationsfähigkeit deines Charakters. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für alle Handwerkern wichtig und hilft auch Kämpfern, ihr Ziel zu treffen. Geschicklichkeit beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Schreinern, Kochen und Backen, Edelsteinschleifen, Glasblasen, Goldschmieden, Schmieden und Schneidern.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="Die Koordinationsfähigkeit deines Charakters. Sie erhöht die Trefferchance im Kampf. Dieses Attribut ist für alle Handwerkern wichtig und hilft auch Kämpfern, ihr Ziel zu treffen. Geschicklichkeit beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Schreinern, Kochen und Backen, Brauen, Töpfern, Edelsteinschleifen, Glasblasen, Rüstschmied, Feinschmieden, Schmieden und Schneidern.">Geschicklichkeit</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -142,7 +143,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Das kognitive Verständnis deines Charakters. Dieses Attribut wird zukünftig für Magier wichtig sein und hilft Alchemisten, magische Tränke zu erzeugen. Intelligenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: -">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="Das kognitive Verständnis deines Charakters. Dieses Attribut wird zukünftig für Magier wichtig sein und gewährt einen kleinen Bonus auf das Lernen aller Fertigkeiten. Intelligenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Stabmagie und Juwelenverzauberung.">Intelligenz</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -150,7 +151,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Fähigkeit deines Charakters, seine Sinne einzusetzen. Sie erhöht die Trefferchance im Kampf und hilft Alchemisten, magische Tränke zu erzeugen. Dieses Attribut ist für Bogenschützen wichtig und hilft auch Nahkämpfern, ihr Ziel zu treffen. Wahrnehmung beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="Die Fähigkeit deines Charakters, seine Sinne einzusetzen. Sie erhöht die Trefferchance im Kampf und hilft Alchemisten, magische Tränke zu erzeugen. Dieses Attribut ist für Bogenschützen wichtig und hilft auch Nahkämpfern, ihr Ziel zu treffen. Wahrnehmung beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Alchemie, Distanzwaffen.">Wahrnehmung</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -166,7 +167,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie ist für Druiden von entscheidender Bedeutung und wird zukünftig die Regeneration von Mana und der Macht der Götter steuern. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: Alchemie.">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="Die Verbundenheit deines Charakters mit der mystischen Welt. Sie wird zukünftig die Regeneration von Mana und der Macht der Götter steuern. Essenz beeinflusst die Lerngeschwindigkeit folgender Fertigkeiten: -">Essenz</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>
@@ -185,7 +186,7 @@ $templates = $db->loadAssocList();
 			<?php include_attribute_js( $limits ); ?>
 			<p style="text-align:center;padding-bottom:10px;">
 				<input type="hidden" name="action" value="newchar_3" />
-				<input type="submit" name="submit" value="Save data" />
+				<input type="submit" name="submit" value="Daten speichern" />
 			</p>
 		</div>
 	</form>

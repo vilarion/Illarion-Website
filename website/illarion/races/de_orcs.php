@@ -1,31 +1,27 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	create_header( 'Illarion - Hintergrund - Client',
+	create_header( 'Illarion - Hintergrund - Orks',
 	'Rassen Illarions',
 	'Hintergrund, Rassen, Geschichte', '', 'menu', '', true );
 	include_header();
 ?>
 
-<?php navBarTop( 'de_dwarfs.php','de_story.php','de_lizards.php' ); ?>
+<?php navBarTop( 'de_dwarves.php','de_races.php','de_lizards.php' ); ?>
 
 <h1>Orks</h1>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/de_humans.php">Menschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_elfes.php">Elfen</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_elves.php">Elfen</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_halflings.php">Halblinge</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarfs.php">Zwerge</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarves.php">Zwerge</a></li>
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/de_orcs.php">Orks</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_lizards.php">Echsenmenschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_gnomes.php">Gnome</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_faeries.php">Feen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_goblins.php">Goblins</a></li>
 		<li class="end" />
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/orc_m.png" alt="münnlicher Ork"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/orc_f.png" alt="weiblicher Ork"/></td></tr></table>
 <?php cap(D); ?>
 <p>er normale Ork ist ein wenig kleiner als ein Mensch. Ihre Haut ist grünlich und zwei von ihren unteren Kieferzähnen
 sind länger als die anderen und reichen ein wenig über die Lippen.</p>

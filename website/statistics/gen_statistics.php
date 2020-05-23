@@ -1,5 +1,5 @@
 <?php
-	// wget --output-document="/home/nitram/public_html/last_hp_stats.html" -q "http://illarion.org/statistics/gen_statistics.php"
+	// wget --output-document="/home/nitram/public_html/last_hp_stats.html" -q "https://illarion.org/statistics/gen_statistics.php"
 
 	set_time_limit( 0 );
 
@@ -35,6 +35,6 @@
 
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_highscores.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_actaccounts.php';
-	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_email.php';
+	//include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_email.php';
 	include $_SERVER['DOCUMENT_ROOT'] . '/statistics/gen_diagramm.php';
 ?>

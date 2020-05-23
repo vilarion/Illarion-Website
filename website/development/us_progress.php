@@ -11,54 +11,80 @@
 
 <h1>Development Progress</h1>
 
-<p>
-    Legend:
-    <span class="planned">Planned</span>,
-    <span class="inProgress">Work-In-Progress</span>,
-    <span class="testing">Testing</span>,
-    <span class="done">Complete</span>
-</p>
+<p>Illarion's development follows clearly specified work packages. Those work packages stand for a state of the game that does not require any future reworking on existing features. Hence, only improvements and new features will be added without fundamental flaws or bugs. The work packages are worked on in parallel and not in sequence. This pages orders them in the predicted sequence of completion, though.</p>
 
-<h2>Server</h2>
+<p>If you want to help to develop Illarion, please contact one of the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php#4">developers</a> or join the <a href="<?php echo Page::getURL(); ?>/community/us_chat.php">chat</a>. Click on the title of a work package to learn more about the individual development items on Mantis Bugtracker.</p>
+
+<h2><a href="<?php echo Page::getURL(); ?>/mantis/view.php?id=9659" target="_blank">Stable state for reviewers and promotion</a></h2>
+
+<p>With this work package, we want to get rid of any bugs and improve the impression of the game during the first hour of playing. The whole road from finding the game over installation until starting the game is affected. Content that is not part of the first hour is not part of this work package albeit important for the overall game.</p>
+
+<h3>Highlights</h3>
+
 <ul>
-    <li><span class="inProgress">Removal of Luabind</span></li>
-    <li><span class="inProgress">Test Suite</span></li>
-    <li><span class="inProgress">Efficient data structures for character search</span></li>
-    <li><span class="planned">Notification about available quests</span></li>
-    <li><span class="planned">New login procedure</span></li>
-    <li><span class="planned">Character creation</span></li>
-    <li><span class="planned">Provide Debian package (.deb)</span></li>
+    <li>Improving the character creation</li>
+    <li>Visual improvements for the client and the interface</li>
+    <li>Update of the website</li>
 </ul>
 
-<h2>Client</h2>
+<h2><a href="<?php echo Page::getURL(); ?>/mantis/view.php?id=9822" target="_blank">New items and improved crafting</a></h2>
+
+<p>This work package will add a reasonable amount of new items to the game, especially weapons and armours, define their use properly and make the available to players. The crafts for these items will be rebalanced in terms of craft distribution over towns, resources, needed materials for items and also prices.</p>
+
+<h3>Highlights</h3>
+
 <ul>
-    <li><span class="inProgress">Session management</span></li>
-    <li><span class="planned">Display of available quests</span></li>
-    <li><span class="planned">New login procedure</span></li>
-    <li><span class="planned">Character creation</span></li>
+    <li>More than 100 new weapons and armours</li>
+    <li>Redesign of crafting recipes</li>
+    <li>Improvements to gathering of resources</li>
 </ul>
 
-<h2>Content</h2>
+<h2><a href="<?php echo Page::getURL(); ?>/mantis/view.php?id=9823" target="_blank">Magic</a></h2>
 
-<h3>Systems</h3>
+<p>Magic is a mandatory feature for a fantasy game. With this work package arcane magic will return to the game and also, we'll release divine magic for priests. Adjustments to craft like actions like alchemy will also be included.</p>
+
+<h3>Highlights</h3>
+
 <ul>
-    <li><span class="inProgress">Balancing crafting</span></li>
-    <li><span class="planned">Magic</span></li>
+    <li>Arcane magic with dozens of spells</li>
+    <li>Divine magic of the gods for templars and priests</li>
+    <li>Craft like enchanting and improvements to alchemy</li>
 </ul>
 
-<h3>NPCs</h3>
+<h2><a href="<?php echo Page::getURL(); ?>/mantis/view.php?id=9914" target="_blank">Review the fighting system</a></h2>
+
+<p>The current fighting system is in need of a review to become more fair, clear and relieable. This work package won't bring many visible changes but an improved and more flexible fighting system.</p>
+
+<h3>Highlights</h3>
+
 <ul>
-    <li><span class="inProgress">Dynamic guards</span>: <a href="http://illarion.org/community/forums/memberlist.php?mode=viewprofile&u=7216">pharse</a></li>
+    <li>Clear use of attributes</li>
+    <li>Skillgain without issues</li>
+    <li>The use of weapons and armours will be distributed in a fair way</li>
 </ul>
 
-<h3>Other</h3>
+<h2><a href="<?php echo Page::getURL(); ?>/mantis/view.php?id=9825" target="_blank">Sandboxing and immersion</a></h2>
+
+<p>Illarion competes with other games. To stand out as an indie game, it needs features no other game can offer. This work package will add features for enhanced immersion and enable new options for the players to shape their characters.</p>
+
+<h3>Highlights</h3>
+
 <ul>
-    <li><span class="inProgress">Quests</span></li>
-    <li><span class="inProgress">Quest logs</span></li>
+    <li>Build your own house</li>
+    <li>Dynamic events</li>
+    <li>Enhancement of the game atmosphere</li>
 </ul>
 
-<h2>Homepage</h2>
+<h2><a href="<?php echo Page::getURL(); ?>/mantis/view.php?id=9824" target="_blank">Content, quests and dungeons</a></h2>
+
+<p>By adding further quests and dungeons, this work package will increased the attractivity of this game. With these features, the lore shall be transported to the player. Books, NPCs, inscriptions and events will teach the lore at every noteable location.</p>
+
+<h3>Highlights</h3>
+
 <ul>
-    <li><span class="inProgress">GM Tool</span></li>
-    <li><span class="inProgress">Migration to CMS Drupal</span></li>
+    <li>Redesign of Illarion's lore and history</li>
+    <li>Release of dozens of new books</li>
+    <li>Addition of new, complex and challenging quests</li>
 </ul>
+
+<?php Page::insert_go_to_top_link(); ?>

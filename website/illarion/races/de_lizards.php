@@ -1,31 +1,27 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	create_header( 'Illarion - Hintergrund - Client',
+	create_header( 'Illarion - Hintergrund - Echsenmenschen',
 	'Rassen Illarions',
 	'Hintergrund, Rassen, Geschichte', '', 'menu', '', true );
 	include_header();
 ?>
 
-<?php navBarTop( 'de_orcs.php','de_story.php','de_gnomes.php' ); ?>
+<?php navBarTop( 'de_orcs.php','de_races.php','de_races.php' ); ?>
 
 <h1>Echsenmenschen</h1>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/de_humans.php">Menschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_elfes.php">Elfen</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_elves.php">Elfen</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_halflings.php">Halblinge</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarfs.php">Zwerge</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarves.php">Zwerge</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_orcs.php">Orks</a></li>
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/de_lizards.php">Echsenmenschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_gnomes.php">Gnome</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_faeries.php">Feen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_goblins.php">Goblins</a></li>
 		<li class="end" />
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/lizard.png" alt="Echsenmensch"/></td></tr></table>
 <?php cap(E); ?>
 <p>ine sehr erstaunliche Rasse sind die Echsenmenschen. Sie sind ein wenig kleiner als ein durchschnittlicher Mensch,
 laufen auf zwei Beinen und haben einen starken Schwanz, um Gleichgewicht und Beweglichkeit zu gewährleisten, wenn sie

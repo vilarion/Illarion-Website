@@ -4,46 +4,42 @@
 	Page::setTitle( 'The Free Online Roleplaying Game' );
 	Page::setDescription( 'Illarion is a free online roleplaying game within a middle age fantasy setting with focus on real roleplay.' );
 	Page::setKeywords( array( 'Startpage', 'News' ) );
+	Page::addCSS( array( 'lightwindow', 'lightwindow_us', 'onlineplayer' ) );
+	Page::addJavaScript( array( 'prototype', 'effects', 'lightwindow' ) );
 	Page::setXHTML();
 	Page::Init();
+	
+	$xmlC = new XmlC( 'UTF-8' );
+	$xml_file = file_get_contents( Page::getRootPath().'/illarion/screenshots_start.xml' );
+	$xmlC->Set_XML_data( $xml_file );
+	
 ?>
 
-<h1>Welcome to Illarion!</h1>
+<h1>Illarion - Carve yourself a new life</h1>
 
-<?php Page::cap('T'); ?>
-<p class="hyphenate">
-he world is in turmoil. The Second Coming of the Elder Gods has shaken the
-realms to their core. Refugees flock to the bastions of the land Illarion
-that were spared from the hardships of the past. Six gems of power were
-given to the Lords of these bastions for safekeeping; but jealousy,
-betrayal and envy are the ever present scourges in the constant struggle
-for power. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy 
-<a href="/illarion/us_factions.php#2">Galmair</a> or wise 
-<a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
+<?php Page::cap('I'); ?>
+<p class="hyphenate">llarion is an online game where genuine roleplay is enforced. The main design principle is a focus on the interaction with other players. All the player characters you will encounter during your time here are living, breathing inhabitants of the mysterious world of Illarion. Each character has its own past, goals, strengths, flaws and personality. Experience glorious adventures as noble knight or live the life of a hardworking craftsman, acquisitive merchant or charismatic priest of the gods. Noble <a href="/illarion/us_factions.php#1">Cadomyr</a>, wealthy <a href="/illarion/us_factions.php#2">Galmair</a> or wise <a href="/illarion/us_factions.php#3">Runewick</a> - whose side will you join?</p>
 
-<p class="hyphenate">
-Illarion is a free open source MMORPG that focuses on true role playing.
-All of the characters that you will encounter during your time here are
-living, breathing inhabitants of this mysterious world. Each character has
-their own past, goals, flaws, strengths and personality. Experience
-glorious adventures as a noble knight or live the life of a hardworking
-craftsman, acquisitive merchant, or charismatic priest of the gods.</p>
+<p class="hyphenate">Illarion - What role will you play? <a href="/illarion/us_java_download.php">Download now and start your adventure!</a></p>
 
-<p class="hyphenate">
-Illarion combines a high fantasy setting with a persistent game world. The
-decisions that you make while playing Illarion will actually impact and
-shape the world around you. Your actions will determine the events that will
-one day fill the pages of Illarion's history books. You won't be able to
-resist the magic of this world.</p>
+<?php foreach( $xmlC->obj_data->screenshots[0]->group as $currGroup ): ?>
+<div><a id="group<?php echo $currGroup->index; ?>"></a></div>
+<h2><?php echo $currGroup->eName; ?></h2>
+<?php foreach( $currGroup->screenshot as $index=>$currScreen ): ?>
+<div style="margin:3px;float:left;width:206px;height:116px;text-align:center;vertical-align:center;">
+	<a style="margin:auto;" href="<?php echo Page::getMediaURL(); ?>/screenshots/<?php echo $currScreen->filename; ?>" title="<?php echo $currScreen->eName; ?>" rel="Illarion Screenshots--<?php echo $currGroup->eName; ?>" class="lightwindow" onclick="return false;">
+		<img src="<?php echo Page::getMediaURL(); ?>/screenshots/preview/<?php echo $currScreen->filename; ?>" width="206" height="116" alt="Click here to view the picture in full size" />
+	</a>
+</div>
+<?php endforeach; ?>
+<?php endforeach; ?>
 
-<p>Illarion - What role will you play?</p>
+<div class="clr"></div>
 
-<?php Page::insert_go_to_top_link(); ?>
-
-<h1>News</h1>
+<h1>Latest news</h1>
 
 <?php
 $newsRenderer = new \News\Renderer\HTMLRenderer(IllaUser::auth('news'));
 $newsDb = new \News\NewsDatabase();
-echo $newsRenderer->renderList($newsDb->getNewsList(3), 'en')
+echo $newsRenderer->renderList($newsDb->getNewsList(1), 'en')
 ?>

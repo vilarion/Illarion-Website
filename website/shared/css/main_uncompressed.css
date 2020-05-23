@@ -509,14 +509,14 @@ div.menu_title img {
 ul.navigation {
 	margin: 16px 8px;
 	padding: 0;
-	list-style: none none outside;
-	color: #DBD9CC;
+	list-style: none inside none;
+    color: #DDC687;
 	line-height: 20px;
-	text-align: center;
+	text-align: left;
 }
 
 ul.navigation li {
-	color: #DBD9CC;
+    color: #DDC687;
 	margin-bottom: 3pt;
 }
 

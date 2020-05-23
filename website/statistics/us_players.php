@@ -1,7 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 
-	Page::setTitle( 'Online-Player' );
+	Page::setTitle( 'Players Online' );
 	Page::setDescription( 'This page shows the players who are online' );
 	Page::setKeywords( array( 'online', 'players', 'statistics' ) );
 
@@ -11,7 +11,7 @@
 	Page::Init();
 ?>
 
-<h1>Online-Player</h1>
+<h1>Players Online</h1>
 
 <?php if ( Page::getDebugger() > 0 ): ?>
 <h2>Debugger running</h2>
@@ -35,8 +35,7 @@ anyway because this makes it usually easier to find errors.</p>
 <p>The server is offline so nobody is able to play. But we are working to change this
 as soon as possible.</p>
 <?php elseif (Page::getPlayerCount() == 0): ?>
-<p>The server is up and running but nobody plays currently. This should stop noone from
-logging on. Usually other follow if someone is playing.</p>
+<p>The server is up and running, but there is currently nobody playing. This should stop no one from logging on. Usually others follow if someone is playing.</p>
 <?php else:
 
     $pgSQL =& Database::getPostgreSQL();
@@ -166,7 +165,7 @@ logging on. Usually other follow if someone is playing.</p>
 	if ( count($quests) > 0):
 ?>
 
-<h2>Quests</h2>
+<h2>Quests and Events</h2>
 
 <table class="quests">
 	<?php foreach($quests as $key=>$quest): ?>
@@ -211,7 +210,7 @@ logging on. Usually other follow if someone is playing.</p>
 <?php if (IllaUser::auth('quests')): ?>
 <p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/us_quests_edit.php'">New quest</button></p>
 <?php elseif (IllaUser::loggedIn()): ?>
-<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php'">New player quest</button></p>
+<p><button onclick="window.location.href='<?php echo Page::getURL(); ?>/statistics/us_quests_edit.php'">New player quest</button></p>
 <?php endif; ?>
 
 <?php if ( count($quests) > 0): ?>

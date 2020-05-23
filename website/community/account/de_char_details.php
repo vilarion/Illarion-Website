@@ -18,7 +18,10 @@
 	}
 	
 	$charid = ( isset( $_GET['charid'] ) && is_numeric($_GET['charid']) ? (int)$_GET['charid'] : 0 );
-
+    if (!$charid)
+    {
+        $charid = ( isset( $_POST['charid'] ) && is_numeric($_POST['charid']) ? (int)$_POST['charid'] : 0 );
+    }
 	if (!$charid)
 	{
 		Messages::add('Charakter ID wurde nicht richtig übertragen.', 'error' );
@@ -57,6 +60,47 @@
 				<td style="width:150px">Name:</td>
 				<td><?php echo $chardata['chr_name']; ?></td>
 			</tr>
+            <?php if ($chardata['is_gm'] == 't'): ?>
+            <tr>
+                <td style="width:150px">Benennung:</td>
+                <td>
+                    <form id="delete_form" name="delete_form" method="post" action="de_char_details.php" style="float:left">
+                        <button type="submit"
+                                style="margin-right:10px;"
+                                title="Löscht die Individuellen Benennungen, die dieser Charakter erhalten hat.">
+                            Individuelle Benennung löschen
+                        </button>
+                        <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
+                        <input type="hidden" name="charid" value="<?php echo $charid; ?>" />
+                        <input type="hidden" name="action" value="char_clear_name" />
+                        <input type="hidden" name="clear" value="known_names" />
+                    </form>
+                    <form id="delete_form" name="delete_form" method="post" action="de_char_details.php" style="float:left">
+                        <button type="submit"
+                                style="margin-right:10px;"
+                                title="Löscht die Vorstellungen die dieser Character durchgeführt hat.">
+                            Vorstellung löschen
+                        </button>
+                        <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
+                        <input type="hidden" name="charid" value="<?php echo $charid; ?>" />
+                        <input type="hidden" name="action" value="char_clear_name" />
+                        <input type="hidden" name="clear" value="introduce" />
+                    </form>
+                    <form id="delete_form" name="delete_form" method="post" action="de_char_details.php" style="float:left">
+                        <button type="submit"
+                                style="margin-right:10px;"
+                                title="Löscht sowohl die individuellen Benennungen, als auch die Vorstellungen. Dadurch wird ein Charakter vollständig unbekannt.">
+                            Beides löschen
+                        </button>
+                        <input type="hidden" name="server" value="<?php echo $_GET['server']; ?>" />
+                        <input type="hidden" name="charid" value="<?php echo $charid; ?>" />
+                        <input type="hidden" name="action" value="char_clear_name" />
+                        <input type="hidden" name="clear" value="all" />
+                    </form>
+                    <div style="clear: both" ></div>
+                </td>
+            </tr>
+            <?php endif; ?>
 			<tr>
 				<td style="width:150px">Rasse:</td>
 				<td><?php echo IllarionData::getRaceName($chardata['chr_race']); ?></td>
@@ -66,7 +110,7 @@
 				<td><?php echo IllarionData::getSexName($chardata['chr_sex']); ?></td>
 			</tr>
 			<tr>
-				<td style="height:12px;" />
+				<td style="height:12px;" ></td>
 			</tr>
 			<tr>
 				<td style="width:150px">Geburtstag:</td>
@@ -85,7 +129,7 @@
 				<td><?php echo $chardata['ply_weight']; ?></td>
 			</tr>
 			<tr>
-				<td style="height:12px;" />
+				<td style="height:12px;" ></td>
 			</tr>
 		</tbody>
 	</table>
@@ -133,11 +177,11 @@
 		<?php
 			switch(max( 1, min( 6, ceil( $chardata['ply_strength'] / 4 ) ) ))
 			{
-				case 1: echo 'Du hast schon Probleme dein eigenes Gewicht zu tragen. dich mit mehr als nur Kleidung zu belasten ist ein Traum deines schwachen Körpers.'; break;
+				case 1: echo 'Du hast schon Probleme dein eigenes Gewicht zu tragen. Dich mit mehr als nur Kleidung zu belasten ist ein Traum deines schwachen Körpers.'; break;
 				case 2: echo 'Deine Tasche kannst du gerade noch tragen, aber voll beladen sollte sie nicht sein.<br />Während längerer Wegstrecken brauchst du die eine oder andere Verschnaufpause.'; break;
 				case 3: echo 'Du bist genauso stark wie jede Person deines Alters ohne tägliches Training.<br />Du kannst zwar keine schweren Sachen heben, allerdings hast du keine Probleme, gewöhnliche Sachen zu tragen.'; break;
-				case 4: echo 'Du bist kräftiger als der durchschnitt, hebst schwerere Sachen ohne dich zu überanstrengen.<br />Selbst eine gute, starke Rüstung bereitet dir keine sonderlichen Probleme.'; break;
-				case 5: echo 'Du hast überall Muskeln. du kannst Dinge heben, bei denen andere schon vom Hinsehen aufgeben würden.<br />Allerdings musst du deswegen auch weite Kleidung bei deinem Schneider kaufen, sonst würdest du sie jedes Mal zerreißen, wenn du deine Muskeln anspannst.'; break;
+				case 4: echo 'Du bist kräftiger als der Durchschnitt, hebst schwerere Sachen ohne dich zu überanstrengen.<br />Selbst eine gute, starke Rüstung bereitet dir keine sonderlichen Probleme.'; break;
+				case 5: echo 'Du hast überall Muskeln. Du kannst Dinge heben, bei denen andere schon vom Hinsehen aufgeben würden.<br />Allerdings musst du deswegen auch weite Kleidung bei deinem Schneider kaufen, sonst würdest du sie jedes Mal zerreißen, wenn du deine Muskeln anspannst.'; break;
 				case 6: echo 'Deine Stärke ist übernatürlich.'; break;
 				default: echo 'Deine Stärke ist unbekannt.'; break;
 			}

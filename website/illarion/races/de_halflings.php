@@ -1,31 +1,27 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	create_header( 'Illarion - Hintergrund - Client',
+	create_header( 'Illarion - Hintergrund - Halblinge',
 	'Rassen Illarions',
 	'Hintergrund, Rassen, Geschichte', '', 'menu', '', true );
 	include_header();
 ?>
 
-<?php navBarTop( 'de_elfes.php','de_story.php','de_dwarfs.php' ); ?>
+<?php navBarTop( 'de_elves.php','de_races.php','de_dwarves.php' ); ?>
 
 <h1>Halblinge</h1>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li><a href="<?php echo $url; ?>/illarion/races/de_humans.php">Menschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_elfes.php">Elfen</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_elves.php">Elfen</a></li>
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/de_halflings.php">Halblinge</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarfs.php">Zwerge</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarves.php">Zwerge</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_orcs.php">Orks</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_lizards.php">Echsenmenschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_gnomes.php">Gnome</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_faeries.php">Feen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_goblins.php">Goblins</a></li>
 		<li class="end" />
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/halfling_m.png" alt="münnlicher Halbling"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/halfling_f.png" alt="weiblicher Halbling"/></td></tr></table>
 <?php cap(F); ?>
 <p>ür die Unwissenden sehen die Halblinge wie die Kinder der Menschen aus und tatsächlich haben sie einige Ähnlichkeiten
 mit der Statur der Menschen. Doch der augenfälligste Unterschied, neben ihrer geringen Körpergröße, sind ihre großen und

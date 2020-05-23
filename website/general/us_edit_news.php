@@ -99,7 +99,7 @@ if ($showPreview): ?>
     </fieldset>
 
     <fieldset>
-        <legend>Allgmein</legend>
+        <legend>General</legend>
 
         <p class="hyphenate" style="font-weight: bold;">
             News entries that got published, are pushed to the players and to facebook using the news feed. For this
@@ -123,11 +123,11 @@ if ($showPreview): ?>
     </fieldset>
 
     <fieldset>
-        <legend>News-Eintrag löschen</legend>
+        <legend>Delete a news entry</legend>
         <p>
             <label>
                 <input type="checkbox" name="deleteConfirmed" value="yes" />
-                Löschung des News-Eintrags bestätigen
+                Confirm the deletion of the news entry
             </label>
         </p>
         <p style="text-align:center;">
@@ -147,8 +147,8 @@ if ($showPreview): ?>
 <ul>
     <li>Bold text (<span style="font-family: monospace;">[b]Text[/b]</span>)</li>
     <li>Italic text (<span style="font-family: monospace;">[i]Text[/i]</span>)</li>
-    <li>URLs (<span style="font-family: monospace;">[url]http://illarion.org[/url]</span> oder
-        <span style="font-family: monospace;">[url=http://illarion.org]Illarion Homepage[/url]</span></li>
+    <li>URLs (<span style="font-family: monospace;">[url]<?php echo Page::getURL(); ?>[/url]</span> oder
+        <span style="font-family: monospace;">[url=<?php echo Page::getURL(); ?>]Illarion Homepage[/url]</span></li>
     <li>Lists (<span style="font-family: monospace;">[list][*]Entry 1[*]Entry 2[/list]</span>)</li>
 </ul>
 

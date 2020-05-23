@@ -47,15 +47,15 @@ the appropriate people.</p>
 
 	<li><a href="?contact=3">Reporting players</a> - To report a player breaking the rules.</li>
 
-	<li><a href="?contact=4">Reporting gamemasters</a> - If you feel there is an issue relating to a Gamemaster (GM)</li>
+	<li><a href="?contact=4">Reporting Staff Members</a> - If you feel there is an issue relating to a Gamemaster (GM) or developer.</li>
 
-	<li><a href="?contact=5">RPG requests Cadomyr</a> - If you need gamemaster support
+	<li><a href="?contact=5">RPG requests Cadomyr</a> - If you need Gamemaster support
 	for a quest in Cadomyr you can ask for it here.</li>
 
-	<li><a href="?contact=6">RPG requests Galmair</a> - If you need gamemaster support
+	<li><a href="?contact=6">RPG requests Galmair</a> - If you need Gamemaster support
 	for a quest in Galmair you can ask for it here.</li>
 	
-	<li><a href="?contact=7">RPG requests Runewick</a> - If you need gamemaster support
+	<li><a href="?contact=7">RPG requests Runewick</a> - If you need Gamemaster support
 	for a quest in Runewick you can ask for it here.</li>
 
 	<li><a href="../mantis/">Bug reports</a> - Mistakes and errors you encounter
@@ -73,7 +73,6 @@ They should be the first people to turn to for a non-technical issue that may ar
 
 <ul>
 <li><a href="?contact=30">Achae Eanstray</a> - English speaking Community Manager (US)</li>
-<li><a href="?contact=31">Alessaina</a> - English speaking Community Manager (US)</li>
 <li><a href="?contact=32">Djironnyma</a> - German speaking Community Manager (EU)</li>
 </ul>
 
@@ -87,14 +86,8 @@ Gamemasters also run the ingame factions of Cadomyr, Galmair and Runewick.
 Thus, all requests that affect the game world should be directed to them.</p>
 
 <ul>
-	<li><a href="?contact=14">Arien Edhel</a> - German speaking GM for general requests (EU)</li>
-    <li><a href="?contact=43">White Crow</a> - English speaking GM for Cadomyr (US)</li>
-    <li><a href="?contact=15">Zephyrius</a> - English speaking GM for Cadomyr (US)</li>
-    <li><a href="?contact=33">Skamato</a> - German speaking GM for Cadomyr (EU)</li>
-    <li><a href="?contact=34">Slightly</a> - English speaking GM for Galmair (EU)</li>
-    <li><a href="?contact=42">Teflon</a> - German speaking GM for Galmair (EU)</li>
-    <li><a href="?contact=41">Bloodraven</a> - English speaking GM for Runewick (EU)</li>
-    <li><a href="?contact=45">Silverwing</a> - German speaking GM for Runewick (EU)</li>
+    <li><a href="?contact=45">Silverwing</a> - German speaking GM</li>
+    <li><a href="?contact=34">Slightly</a> - English speaking GM</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -111,8 +104,7 @@ Contact them especially if you want to join the development team of Illarion.</p
     <li><a href="?contact=25">Vilarion</a> - Server, Server Administrator</li>
 	<li><a href="?contact=23">Nitram</a> - Client, Homepage</li>
 	<li><a href="?contact=11">Estralis Seborian</a> - Game Content</li>
-	<li><a href="?contact=22">Martin</a> - Graphics</li>
-	<li><a href="?contact=40">Zot</a> - Maps</li>
+	<li><a href="?contact=40">Evie</a> - Maps</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -120,9 +112,9 @@ Contact them especially if you want to join the development team of Illarion.</p
 <h2><a name="5"></a>Committee Illarion e.V.</h2>
 
 <ul>
-	<li><a href="?contact=25">Vilarion</a> - chairman</li>
-	<li><a href="?contact=23">Nitram</a> - treasurer</li>
-	<li><a href="?contact=21">Lennier</a> - secretary</li>
+	<li><a href="?contact=11">Estralis</a> - chairman</li>
+	<li><a href="?contact=46">Merung</a> - treasurer</li>
+	<li><a href="?contact=34">Slightly</a> - secretary</li>
 </ul>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -132,12 +124,12 @@ Contact them especially if you want to join the development team of Illarion.</p
 <h3>Illarion e.V.</h3> 
 
 <p>
-E-Mail: <a href="mailto:comittee@illarion.org">committee@illarion.org</a><br />
+E-Mail: <a href="mailto:committee@illarion.org">committee@illarion.org</a><br />
 Webmaster: <a href="mailto:webmaster@illarion.org">Illarion e.V.</a><br />
 Register court: Amtsgericht Kempten<br /> 
 Register No.: VR 30767 <br /><br />
-Copyright 1997-2014 by Illarion e.V. - A free online role playing game<br />
-This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
+The website and its content is licensed under AGPLv3.<br /><br />
+This page is valid <a href="https://validator.w3.org/check?uri=referer" rel="external">XHTML 1.1</a> and <a href="https://jigsaw.w3.org/css-validator/check/referer" rel="external">CSS 2</a>.
 </p>
 
 <?php Page::insert_go_to_top_link(); ?>
@@ -171,9 +163,9 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          "reconstruct your report with the server logs.",false);
       break;
       case 4: //Reporting GMs
-         define(_CONTACT_NAME,"Reporting gamemasters",false);
+         define(_CONTACT_NAME,"Reporting Staff Members",false);
          define(_CONTACT_MAIL,"gm_complaint@illarion.org",false);
-         define(_CONTACT_DETAILS,"In the situation that a gamemaster abused".
+         define(_CONTACT_DETAILS,"In the situation that a Gamemaster or Developer abused".
          " his or her powers to support or punish a player in an improper".
          " way you can report them here. Those reports are handled by an".
          " impartial party.",false);
@@ -181,21 +173,21 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
       case 5: //Cadomyr requests
          define(_CONTACT_NAME,"RPG requests for Cadomyr",false);
          define(_CONTACT_MAIL,"cadomyr@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Cadomyr gamemaster ".
+         define(_CONTACT_DETAILS,"Here you can contact a Cadomyr Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
       case 6: //Galmair requests
          define(_CONTACT_NAME,"RPG requests for Galmair",false);
          define(_CONTACT_MAIL,"galmair@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Galmair gamemaster ".
+         define(_CONTACT_DETAILS,"Here you can contact a Galmair Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
       case 7: //Runewick requests
          define(_CONTACT_NAME,"RPG requests for Runewick",false);
          define(_CONTACT_MAIL,"runewick@illarion.org",false);
-         define(_CONTACT_DETAILS,"Here you can contact a Runewick gamemaster ".
+         define(_CONTACT_DETAILS,"Here you can contact a Runewick Gamemaster ".
          "when you need their help with a quest."
          ,false);
       break;
@@ -204,16 +196,10 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          define(_CONTACT_MAIL,"estralis@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead content developer of Illarion.",false);
       break;
-      case 14: //Arien Edhel
-         define(_CONTACT_NAME,"Arien Edhel",false);
-         define(_CONTACT_MAIL,"arien@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages".
-         " general requests and rule violations.",false);
-      break;
       case 15: //Zephyrius
-	define(_CONTACT_NAME,"Zephyrius",false);
-	define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
-	define(_contact_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
+         define(_CONTACT_NAME,"Zephyrius",false);
+         define(_CONTACT_MAIL,"zephyrius@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Runewick.",false);
       break;
       case 22: //Martin
          define(_CONTACT_NAME,"Martin",false);
@@ -229,65 +215,52 @@ This page is valid <a href="http://validator.w3.org/check?uri=referer" rel="exte
          define(_CONTACT_NAME,"Vilarion",false);
          define(_CONTACT_MAIL,"vilarion@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead server developer of Illarion. ".
-         "He also is the server administrator, i.e. 'root'. Furthermore he is the chairman ".
-         "of the Illarion society.",false);
-      break;
-      case 28: //Aragon
-         define(_CONTACT_NAME,"Aragon",false);
-         define(_CONTACT_MAIL,"aragon@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is the treasurer of the ".
-         "Illarion e.V. and is able to answer questions about the society."
-         ,false);
+         "He also is the server administrator, i.e. 'root'.",false);
       break;
       case 30: //Achae
          define(_CONTACT_NAME,"Achae Eanstray",false);
          define(_CONTACT_MAIL,"achae@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
       break;
-      case 31: //Alessaina
-         define(_CONTACT_NAME,"Alessaina",false);
-         define(_CONTACT_MAIL,"alessaina@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is an English speaking Community Manger.",false);
+      case 31: //Obsydien
+         define(_CONTACT_NAME,"Obsydien",false);
+         define(_CONTACT_MAIL,"obdydien@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
       break;
       case 32: //Djironnyma
          define(_CONTACT_NAME,"Djironnyma",false);
          define(_CONTACT_MAIL,"djironnyma@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is a German speaking Community Manger.",false);
       break;
-      case 33: //Skamato
-         define(_CONTACT_NAME,"Skamato",false);
-         define(_CONTACT_MAIL,"skamato@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
-      break;
       case 34: //Slightly
          define(_CONTACT_NAME,"Slightly",false);
          define(_CONTACT_MAIL,"slightly@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Galmair.",false);
       break;
       case 40: //Zot
-         define(_CONTACT_NAME,"Zot",false);
-         define(_CONTACT_MAIL,"zot@illarion.org",false);
+         define(_CONTACT_NAME,"Evie",false);
+         define(_CONTACT_MAIL,"evie@illarion.org",false);
          define(_CONTACT_DETAILS,_CONTACT_NAME." is the lead map developer of Illarion.",false);
       break;
       case 41: //Bloodraven
          define(_CONTACT_NAME,"Bloodraven",false);
          define(_CONTACT_MAIL,"bloodraven@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Runewick.",false);
       break;
       case 42: //Teflon
          define(_CONTACT_NAME,"Teflon",false);
          define(_CONTACT_MAIL,"teflon@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Galmair.",false);
-      break;
-      case 43: //White Crow
-         define(_CONTACT_NAME,"White Crow",false);
-         define(_CONTACT_MAIL,"whitecrow@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Cadomyr.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Galmair.",false);
       break;
       case 45: //Silverwing
          define(_CONTACT_NAME,"Silverwing",false);
          define(_CONTACT_MAIL,"silverwing@illarion.org",false);
-         define(_CONTACT_DETAILS,_CONTACT_NAME." is a gamemaster who manages the faction of Runewick.",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is a Gamemaster who manages the faction of Cadomyr.",false);
+      break;
+      case 46: //Merung
+         define(_CONTACT_NAME,"Merung",false);
+         define(_CONTACT_MAIL,"merung@illarion.org",false);
+         define(_CONTACT_DETAILS,_CONTACT_NAME." is is the treasurer of the Illarion e.V..",false);
       break;
       default:
          MainForm();

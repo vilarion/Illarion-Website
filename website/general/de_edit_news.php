@@ -100,7 +100,7 @@ if ($showPreview): ?>
     </fieldset>
 
     <fieldset>
-        <legend>Allgmein</legend>
+        <legend>Allgemein</legend>
 
         <p class="hyphenate" style="font-weight: bold;">
             News-Einträge die veröffentlicht wurden, werden über den News-Feed an die Spieler und an Facebook geschickt. Darum
@@ -148,8 +148,8 @@ if ($showPreview): ?>
 <ul>
     <li>Fetter Text (<span style="font-family: monospace;">[b]Text[/b]</span>)</li>
     <li>Kursiver Text (<span style="font-family: monospace;">[i]Text[/i]</span>)</li>
-    <li>URLs (<span style="font-family: monospace;">[url]http://illarion.org[/url]</span> oder
-        <span style="font-family: monospace;">[url=http://illarion.org]Illarion Homepage[/url]</span></li>
+    <li>URLs (<span style="font-family: monospace;">[url]<?php echo Page::getURL(); ?>[/url]</span> oder
+        <span style="font-family: monospace;">[url=<?php echo Page::getURL(); ?>]Illarion Homepage[/url]</span></li>
     <li>Listen (<span style="font-family: monospace;">[list][*]Punkt 1[*]Punkt 2[/list]</span>)</li>
 </ul>
 

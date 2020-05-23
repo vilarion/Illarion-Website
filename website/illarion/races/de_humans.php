@@ -1,31 +1,27 @@
 <?php
 	include_once ( $_SERVER['DOCUMENT_ROOT'] . '/shared/shared.php' );
-	create_header( 'Illarion - Hintergrund - Client',
+	create_header( 'Illarion - Hintergrund - Menschen',
 	'Rassen Illarions',
 	'Hintergrund, Rassen, Geschichte', '', 'menu', '', true );
 	include_header();
 ?>
 
-<?php navBarTop( '','de_story.php','de_elfes.php' ); ?>
+<?php navBarTop( 'de_races.php','de_races.php','de_elves.php' ); ?>
 
 <h1>Menschen</h1>
 
 <div class="menu">
 	<ul class="menu_top">
 		<li class="selected"><a href="<?php echo $url; ?>/illarion/races/de_humans.php">Menschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_elfes.php">Elfen</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_elves.php">Elfen</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_halflings.php">Halblinge</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarfs.php">Zwerge</a></li>
+		<li><a href="<?php echo $url; ?>/illarion/races/de_dwarves.php">Zwerge</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_orcs.php">Orks</a></li>
 		<li><a href="<?php echo $url; ?>/illarion/races/de_lizards.php">Echsenmenschen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_gnomes.php">Gnome</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_faeries.php">Feen</a></li>
-		<li><a href="<?php echo $url; ?>/illarion/races/de_goblins.php">Goblins</a></li>
 		<li class="end" />
 	</ul>
 </div>
 
-<table class="center"><tr><td><img src="<?php echo $url; ?>/shared/pics/races/human_m.png" alt="münnlicher Mensch"/></td><td> </td><td><img src="<?php echo $url; ?>/shared/pics/races/human_f.png" alt="weiblicher Mensch"/></td></tr></table>
 <?php cap(D); ?>
 <p>er Menschen Gedächtnis ist kurz. So, wie auch ihre Lebensspanne im Vergleich zu den anderen Völkern nicht
 lange währt, so reicht das Wissen über ihre eigene Geschichte und ihre Wurzeln nicht tief. In den vielen Kriegen,

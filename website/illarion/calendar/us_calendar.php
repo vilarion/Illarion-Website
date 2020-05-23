@@ -15,8 +15,8 @@ $illa_year=illa_date('y');
 $illa_today=illa_date('d');
 $illa_month=illa_date('m');
     // Monatsnamen und beschreibung
-    $monate=array("Elos","Tanos","Zhas","Ushos","Siros","Ronas","Bras","Eldas","Irmas","Malas","Findos","Olos","Adras","Naras","Chos","Mas");
-    $monate_desc=array("Month of <br>Magic","Month of <br>Floods","Month of <br>Loyalty","Month of <br>Sowing","Month of <br>Love","Month of <br>Generosity","Month of <br>Immolation","Month of <br>Abrosia","Month of <br>Trade","Month of the <br>Hunter","Month of <br>Fine Arts","Month of <br>Harvest","Month of <br>Intoxication","Month of the <br>Four Winds","Month of <br>Commemoration","Month of <br>Blood");
+    $monate=array("Elos","Tanos","Zhas","Ushos","Siros","Ronas","Brás","Eldas","Irmas","Malas","Findos","Olos","Adras","Naras","Chos","Mas");
+    $monate_desc=array("Month of <br>Magic","Month of <br>Floods","Month of <br>Loyalty","Month of <br>Sowing","Month of <br>Love","Month of <br>Generosity","Month of <br>Immolation","Month of <br>Abstinence","Month of <br>Trade","Month of the <br>Hunter","Month of <br>Fine Arts","Month of <br>Harvest","Month of <br>Intoxication","Month of the <br>Four Winds","Month of <br>Commemoration","Month of <br>Blood");
 ?>
 
 <!-- Webteil -->
@@ -25,7 +25,9 @@ $illa_month=illa_date('m');
 
 <h2>Current date: <?php echo $illa_today.". "; echo $monate[$illa_month-1]." "; echo $illa_year;?></h2>
 
-<br />
+<p>In the world Illarion, time passes three times faster than in real life. This means that a day in Illarion lasts only eight hours in real life. If one refers to a day in real life, it is common to call this a "dwarven day". The origin of this is the extended working shift of hard working dwarves in the underground who do not rely on the sunlight. They work three times longer than all other lazy races.</p>
+
+<p>Click on the description of a month to learn more about it. Also, you can click on the Signs of the Zodiac for more information on the typical traits of a character that was born in each month.</p>
 
 <?php
 $this_month=1;
@@ -41,7 +43,7 @@ while ($this_month < 17)
 
             <tr>
 	    <td colspan='3' rowspan='2'>
-	    <a href='signs/us_sign_<?php echo $this_month; ?>.php' class='lightwindow' params='lightwindow_height=450,lightwindow_width=400'>
+	    <a href='signs/us_sign_<?php echo $this_month; ?>.php' title='<?php echo $monate[$this_month-1] ?>' class='lightwindow' params='lightwindow_height=450,lightwindow_width=400'>
 	        <img src='images/image_<?php echo $this_month; ?>.gif' alt='Grafik'>
             </a>
 	    </td>

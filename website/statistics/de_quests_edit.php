@@ -17,12 +17,13 @@
 
 	list( $title_de, $title_us, $content_de, $content_us, $type, $status, $tba, $hour, $minute, $day, $month, $year ) = loadQuestEditData( $id );
 
-	$days_in_month = (int)date('t', mktime( 1, 1, 1, $month, 0, $year));
+	$days_in_month = (int)date('t', mktime( 1, 1, 1, $month, 1, $year));
 	$current_year  = (int)date('Y');
 
 ?>
 
 <h1><?php if ($id): ?>Quest bearbeiten<?php else: ?>Quest erstellen<?php endif; ?></h1>
+	<p>Schreibe bitte alle Informationen in Deutsch und Englisch. Benutze bitte keine automatische Übersetzung. Vielen Dank!</p>
 
 <form action="<?php echo Page::getURL(); ?>/statistics/de_quests_edit.php" method="post" id="quest_form">
 	<h2>Name der Quest</h2>

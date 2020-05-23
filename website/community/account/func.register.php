@@ -2,7 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/shared/shared.php';
 	if (!isset($_GET['action']))
 	{
-		header('Location: http://illarion.org');
+		header('Location: https://illarion.org');
 		exit();
 	}
 	$cnt = ( is_numeric($_GET['cnt']) ? (int)$_GET['cnt'] : 0 );
@@ -12,11 +12,11 @@
 	}
 
 	$db =& Database::getPostgreSQL( 'accounts' );
-	$value = preg_replace('/%([0-9a-f]{2})/ie', 'chr(hexdec($1))', (string)$_GET['value']);
+	$value = (string)$_GET['value'];
 	$value = trim($value);
 	if ($_GET['action'] == 'check_user')
 	{
-		$db->setQuery("SELECT COUNT(*) FROM account WHERE lower(acc_name) = ".$db->Quote( strtolower($value) ));
+		$db->setQuery("SELECT COUNT(*) FROM account WHERE acc_login = ".$db->Quote($value));
 		if ($db->loadResult())
 		{
 			echo 0;

@@ -81,7 +81,7 @@
 
 	$query = "SELECT character_details.char_id, character_details.settings"
     	. "\n FROM character_details"
-        . "\n WHERE char_id IN (".implode(',',$char_ids).")"
+        . "\n WHERE char_id IN ('0".implode("','",$char_ids)."')"
     ;
 
 	$db_hp->setQuery( $query );
@@ -235,8 +235,9 @@
     				$show_story = ( (int)($settings&4) > 0 );
     				$show_birthday = ( (int)($settings&8) > 0 );
 
-				echo "<tr>";
+                echo "<tr>";
 				echo "<td>&nbsp;";
+                               
 				if ($show_profil)
 				{
 					echo "<a href='".$url."/community/de_charprofile.php?id=".dechex( $chars[$i]['chr_playerid'] )."'>".$chars[$i]['chr_name']."</a></td>";

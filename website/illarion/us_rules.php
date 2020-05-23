@@ -14,7 +14,6 @@
 
 <?php Page::cap('O'); ?>
 <p>n this page you can find all the rules and procedures that apply to the game Illarion.
-On the Illarion forums and in the Illarion chat, the rules apply analogously.
 They should cover most situations in Illarion. In case of doubts, contact a
 Gamemaster. They know the rules by heart, and can help you when conflicts or
 questions arise. The most important principle in Illarion though is:</p>
@@ -22,7 +21,12 @@ questions arise. The most important principle in Illarion though is:</p>
 <p><b>We play with, not against each other.</b></p>
 
 <p>People who play Illarion and follow this principle can
-hardly do anything wrong.</p>
+hardly do anything wrong. </p>
+
+<p>We are an open and tolerant community.
+Harassment, threats or insults, including racist or sexist statements against other players will
+not be tolerated. This hold for all platforms of Illarion: The game, the board
+and the chat, including private messages.</p>
 
 <h2>Content</h2>
 <ul>
@@ -35,6 +39,7 @@ hardly do anything wrong.</p>
 <li><a class="hidden" href="#ooc">Out of character (OOC)</a></li>
 <li><a class="hidden" href="#language">Language of characters and emotes</a></li>
 <li><a class="hidden" href="#behavior">Behaviour in the game</a></li>
+<li><a class="hidden" href="#forum">Forum and Chat</a></li>
 <li><a class="hidden" href="#bugs">Bug exploits</a></li>
 <li><a class="hidden" href="#copyright">Open source and copyright</a></li>
 </ul>
@@ -98,7 +103,7 @@ they have to inform the Illarion staff about this.
 <div><a id="names"></a></div>
 <h2>Names</h2>
 
-<p>Names of characters have to fit a medieval fantasy world and the race of the
+<p>Names of characters have to fit a mediaeval fantasy world and the race of the
 character. In addition, the following types of names are not allowed:</p>
 
 <ul>
@@ -115,7 +120,7 @@ character. In addition, the following types of names are not allowed:</p>
 <div><a id="world"></a></div>
 <h2>The game world</h2>
 
-<p>The description of the game world as published on http://www.illarion.org is mandatory. 
+<p>The description of the game world as published on <?php echo Page::getURL(); ?> is mandatory. 
 The races allowed to play are limited to the races offered to choose during the character 
 creation in the account system. It's not allowed to roleplay any mixed-race characters.</p>
 
@@ -206,10 +211,6 @@ characters and leave no room for reaction are forbidden.</p>
 glorify violence are strictly forbidden. Also all contents that hurt the ideals
 and moralities of involved players and random listeners are not allowed.</p>
 
-<p>Harassment, threats or insults, including racist or sexist statements against other players will
-not be tolerated. This hold for all platforms of Illarion: The game, the board
-and the chat, including private messages.</p>
-
 <p>It is not allowed to react to a rule violation of another player with another rule violation 
 (e.g. OOC-messages). These breaches will be dealt with, regardless of the situation. 
 It is unwanted for players to rebuke each other for rule violations. If a rule violation
@@ -218,6 +219,15 @@ It is unwanted for players to rebuke each other for rule violations. If a rule v
  <p>The purposeful attacking of a character without clearly traceable and
 reasonable roleplaying reason is forbidden. Immediate killing of a character
 right after resurrection ("res-killing") is not allowed.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="forum"></a></div>
+<h2>Forum and Chat</h2>
+
+<p>On the Forum and the Illarion Chat, common netiquette are applicable. Full quotes, off-topic posts, illegal, offensive or disturbing (e.g. gore, violence, nudity) posts and links are prohibited. Do not use alternative accounts (sock puppets) to support your statements. Do not post for the sake of causing unrest (trolling, flaming, ranting). Continuation of locked threads or replying to very old threads (grave digging) is forbidden.</p>
+
+<p>Discussions on features or events of the game shall always be constructive and include a proposal for improvement. Complaints about other players or rule violations shall be <a href="<?php echo Page::getURL(); ?>/community/us_contact.php?contact=3">reported to the staff</a> and must not be discussed on the forum. Likewise, complaints about staff members shall be reported to the <a href="<?php echo Page::getURL(); ?>/community/us_contact.php?contact=4">Illarion Society Board</a>.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -238,10 +248,10 @@ offer an advantage to the player are not allowed.</p>
 <h2>Open source and copyright</h2>
 
 <p>The sources of the Java software (client and development tools) are released
-under <a href="http://www.gnu.org/licenses/gpl-3.0">GPLv3</a>.
+under <a href="https://www.gnu.org/licenses/gpl-3.0">GPLv3</a>.
 The sources of server, scripts and maps are released under
-<a href="http://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
-These sources are thus <a href="http://illarion.org/development/us_opensource.php">
+<a href="https://www.gnu.org/licenses/agpl-3.0">AGPLv3</a>.
+These sources are thus <a href="<?php echo Page::getURL(); ?>/development/us_opensource.php">
 available for public review</a> and usage. </p>
 
 <p>All other content of Illarion, pictures, sound effects,

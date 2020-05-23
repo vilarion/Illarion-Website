@@ -8,7 +8,7 @@
 
 	if (!$charid)
 	{
-		Messages::add('Character ID was not transfered correctly.', 'error' );
+		Messages::add('Character ID was not transferred correctly.', 'error' );
 		includeWrapper::includeOnce( Page::getRootPath().'/community/account/us_charlist.php' );
 		exit();
 	}
@@ -62,9 +62,9 @@
 
 	Page::setXHTML();
 ?>
-<h1>Characterdescription</h1>
+<h1>Character Description</h1>
 
-<h2>Short description (not more then 255 characters)</h2>
+<h2>Short description (not more than 255 characters)</h2>
 
 <form method="post" action="<?php echo Page::getURL(); ?>/community/account/us_char_description.php?charid=<?php echo $charid,($server == 'devserver' ? '&amp;server=1' : ''); ?>" id="mainForm">
 	<p>
@@ -78,7 +78,7 @@
 	</p>
 
 	<?php if ($server == 'illarionserver'): ?>
-	<h2>Detailed Description for the web profil</h2>
+	<h2>Detailed description for the web profil</h2>
 
 	<p>
 		English<br />

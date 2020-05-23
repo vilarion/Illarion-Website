@@ -86,7 +86,8 @@ $templates = $db->loadAssocList();
 <h2>Step 3</h2>
 
 <p>You have to put in the attributes of your character here.</p>
-<p>Below you can choose an attribute package to get a general idea of what attributes go towards a certain role. For example, druids need a pool of 30 points shared between perception, essence, and intelligence. Feel free to make changes to existing packages, but just be careful to not stray too far from them if that is a role you'd like to play. Hover your mouse of an attribute to get a tool tip.</p>
+<p>The attribute packages should give your a general idea of what attributes go towards a certain role. Make changes to existing packages to adjust them to the role you'd like to play. Druids need a pool of 30 points shared between perception, essence, and intelligence. Mages need a pool of 30 points shared between intelligence, essence, and willpower.</p> 
+<p>Hover your mouse of an attribute to get a tool tip.</p>
 <div>
 	<form action="<?php echo Page::getURL(); ?>/community/account/us_newchar_4.php?charid=<?php echo $charid,($_GET['server'] == '1' ? '&amp;server=1' : ''); ?>" method="post" name="create_char" id="create_char">
 		<div>
@@ -125,7 +126,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The physical resilience of your character. It governs the regneration. This attribute if of importance to all gatherers and also assists fighters to withstand damage. Constitution affects the learning speed of the following skills: Farming, Firing Bricks, Fishing, Herblore, Mining, and Woodcutting.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
+							<a title="The physical resilience of your character. It governs the regeneration of hitpoints. This attribute is of importance to all gatherers and also assists fighters to withstand damage. Constitution affects the learning speed of the following skills: Digging, Farming, Fishing, Herblore, Husbandry, Mining, Tanning and Weaving, and Woodcutting.">Constitution</a> (<?php echo $limits['minconstitution'],' - ',$limits['maxconstitution']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'constitution' ); ?>
@@ -133,7 +134,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The coordination skills of your character. It increases the chance to hit in combat. This attribute is vital for all crafters and helps fighters to hit their target. Dexterity affects the learning speed of the following skills: Carpentry, Baking/Cooking, Gemcutting, Glass Blowing, Goldsmithing, Smithing, and Tailoring.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
+							<a title="The coordination skills of your character. It increases the chance to hit in combat. This attribute is vital for all crafters and helps fighters to hit their target. Dexterity affects the learning speed of the following skills: Armourer, Blacksmithing, Carpentry, Baking/Cooking, Brewing, Gemcutting, Glass Blowing, Finesmithing, Pottery, and Tailoring.">Dexterity</a> (<?php echo $limits['mindexterity'],' - ',$limits['maxdexterity']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'dexterity' ); ?>
@@ -141,7 +142,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The cognitive insight of your character. This attribute will be of importance for magicians in future and helps alchemists to brew potions. Intelligence affects the learning speed of the following skills: -">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
+							<a title="The cognitive insight of your character. This attribute will be of importance for magicians in future and grants a small bonus on learning all skills. Intelligence affects the learning speed of the following skills: Wand magic and Enchanting of Jewels.">Intelligence</a> (<?php echo $limits['minintelligence'],' - ',$limits['maxintelligence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'intelligence' ); ?>
@@ -149,7 +150,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The ability of your character to use the six senses. It increases the chance to hit in combat and helps alchemists to brew potions. This attribute is important for archers and also helps melee fighters to hit their target. Perception affects the learning speed of the following skills: Distance Weapons.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
+							<a title="The ability of your character to use the six senses. It increases the chance to hit in combat and helps alchemists to brew potions. This attribute is important for archers and also helps melee fighters to hit their target. Perception affects the learning speed of the following skills: Alchemy, Distance Weapons.">Perception</a> (<?php echo $limits['minperception'],' - ',$limits['maxperception']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'perception' ); ?>
@@ -165,7 +166,7 @@ $templates = $db->loadAssocList();
 					</tr>
 					<tr>
 						<td>
-							<a title="The affinity of your character to the mystical world. It matters most for alchemists and will control the regneration of mana and divine power. Essence affects the learning speed of the following skills: Alchemy.">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
+							<a title="The affinity of your character to the mystical world. It will control the regeneration of mana and divine power. Essence affects the learning speed of the following skills: -">Essence</a> (<?php echo $limits['minessence'],' - ',$limits['maxessence']; ?>)
 						</td>
 						<td>
 							<?php include_slider( $limits, 'essence' ); ?>

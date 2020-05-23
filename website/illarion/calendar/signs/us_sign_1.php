@@ -4,22 +4,13 @@
 ?>
 <div>
 	<h1>
-		<img src="<?php echo $url; ?>/illarion/calendar/images/image_1.png" style="height:60px;width:60px;" alt="Hind" />
+		<img src="<?php echo $url; ?>/illarion/calendar/images/image_1.gif" style="height:60px;width:60px;" alt="Hind" />
 		The wise Hind
 	</h1>
 
-	<h2>Monat: Elos</h2>
+	<h2>Month: Elos</h2>
 
-	<b>Meaning</b>
-	<p>Helpfulness and humility are a special characteristic of Hinds. As well as they
-	are oftenly withdrawn, they are likely to seek solitude.</p>
+<p>Helpfulness and humility are a special characteristic of the wise Hinds. Although friendly to most who encounter them they are commonly shy and are likely to seek solitude, living quiet and secluded lives. Hinds gather wisdom by being very thoughtful people, carefully considering their actions and those of others. Despite their wisdom, however, it is not in their nature to be decisive and sometimes the Hind might agonise over the implications of the smallest of decisions for days.</p>
 
-	<br />
-	<b>Positive characteristics</b>
-	<p>Wise, helpful, friendly</p>
-
-	<br />
-	<b>Negative characteristics</b>
-	<p>Oftenly undecided</p>
 </div>
 <?php include_short_footer(); ?>

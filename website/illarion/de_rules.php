@@ -13,8 +13,7 @@
 <h1>Spielregeln</h1>
 
 <?php Page::cap('A'); ?>
-<p>uf dieser Seite finden sich alle Regeln und Verfahrensweisen, die im Spiel Illarion
-gelten. Auf den Foren und dem Chat von Illarion gelten alle Regeln sinngemäß.
+<p>uf dieser Seite finden sich alle Regeln und Verfahrensweisen, die im Spiel Illarion gelten. 
 Sie decken die meisten Situationen in Illarion ab und im
 Zweifelsfalle gibt es die Gamemaster, die sich um Streitfälle kümmern können. 
 Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
@@ -22,6 +21,13 @@ Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 <p><b>Wir spielen miteinander, nicht gegeneinander.</b></p>
 
 <p>Wer Illarion nach diesem Grundsatz spielt, kann eigentlich nichts falsch machen.</p>
+
+<p>Wir wollen eine offene und tolerante Community sein.
+Jegliche Belästigungen, Bedrohungen oder Beleidigungen, 
+einschließlich rassistischer oder sexistischer Äußerungen, 
+die sich gegen andere Spieler richten, werden nicht toleriert. 
+Dies gilt für alle Plattformen von Illarion: 
+das Spiel, das Forum und den Chat, einschließlich privater Nachrichten.</p>
 
 <h2>Inhalt</h2>
 <ul>
@@ -34,6 +40,7 @@ Der wichtigste Grundsatz für das Spiel ist allerdings:</p>
 <li><a class="hidden" href="#ooc">Out of character (OOC)</a></li>
 <li><a class="hidden" href="#language">Sprache eines Charakters und Emotes</a></li>
 <li><a class="hidden" href="#behavior">Verhalten im Spiel</a></li>
+<li><a class="hidden" href="#forum">Forum und Chat</a></li>
 <li><a class="hidden" href="#bugs">Ausnutzen von Spielschwächen</a></li>
 <li><a class="hidden" href="#copyright">Open Source und das Urheberrecht</a></li>
 </ul>
@@ -122,7 +129,7 @@ zulässig:</p>
 <div><a id="world"></a></div>
 <h2>Die Spielwelt</h2>
 
-<p>Die Beschreibung der Spielwelt, wie auf http://www.illarion.org veröffentlicht, ist verpflichtend.
+<p>Die Beschreibung der Spielwelt, wie auf <?php echo Page::getURL(); ?> veröffentlicht, ist verpflichtend.
 Bei der Auswahl der Rassen eines Charakters ist die Auswahl auf die bei der Charaktererstellung angegebenen Rassen begrenzt.
 Auch über das Rollenspiel ist es nicht erlaubt, Mischlingscharaktere irgendeiner Art zu spielen.</p>
 
@@ -213,12 +220,6 @@ Spiel strengstens verboten. Außerdem dürfen durch alle Schilderungen im Spiel
 die Wertvorstellungen und moralischen Grundsätze aller beteiligten Spieler und
 zufälliger Zuhörer nicht verletzt werden.</p>
 
-<p>Jegliche Belästigungen, Bedrohungen oder Beleidigungen, 
-einschließlich rassistischer oder sexistischer Äußerungen, 
-die sich gegen andere Spieler richten, werden nicht toleriert. 
-Dies gilt für alle Plattformen von Illarion: 
-das Spiel, das Forum und den Chat, einschließlich privater Nachrichten.</p>
-
 <p>Auf Regelverstöße anderer Spieler darf nicht ebenfalls mit einem Regelverstoß
 (z.B. OOC-Nachrichten) reagiert werden. Solche Verfehlungen werden völlig
 unabhängig der Situation ebenfalls bestraft. Des Weiteren ist es nicht
@@ -229,6 +230,15 @@ Illarion darüber informiert werden, um diesen Fall zu bearbeiten.</p>
 <p>Das Angreifen von Charakteren ohne angemessenen und nachprüfbaren
 Rollenspielgrund ist verboten. Das sofortige Töten eines Charakters direkt nach
 einer Wiederbelebung ("reskilling") ist nicht erlaubt.</p>
+
+<?php Page::insert_go_to_top_link(); ?>
+
+<div><a id="forum"></a></div>
+<h2>Forum und Chat</h2>
+
+<p>Auf dem Forum und im Illarion-Chat sind übliche Netiquette zu wahren. Vollzitate, themenfremde Beiträge, illegale, beleidigenden oder anstößige (z.B. Widerliches, Gewalt, Nacktheit) Inhalte und Links sind verboten. Benutze keine Zweitaccounts (Sockenpuppen) um deine eigenen Beiträge zu unterstützen. Erstelle keine Beiträge um Unfrieden zu stiften (trolling, flaming, ranting). Die Fortsetzung von geschlossenen Diskussionen oder das Antworten auf sehr alte Beiträge (grave digging) ist verboten.</p>
+
+<p>Diskussionen über Features oder Ereignisse im Spiel sollen immer konstruktiv geführt werden und Verbesserungsvorschläge enthalten. Beschwerden über andere Spieler oder Regelverstöße sind dem <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=3">Illarion-Team</a> zu melden und dürfen nicht auf dem Forum diskutiert werden. Ebenso sind Beschwerden über Teammitglieder dem <a href="<?php echo Page::getURL(); ?>/community/de_contact.php?contact=4">Vorstand des Illarion e.V.</a> zu melden.</p>
 
 <?php Page::insert_go_to_top_link(); ?>
 
@@ -250,11 +260,11 @@ so einen Vorteil für den Spieler bewirken, ist nicht gestattet.</p>
 <h2>Open Source und das Urheberrecht</h2>
 
 <p>Der Quellcode der Java-Anwendungen (Client und Entwicklungstools) ist unter
-der <a href="http://www.gnu.org/licenses/gpl-3.0">
+der <a href="https://www.gnu.org/licenses/gpl-3.0">
 GPLv3</a> veröffentlicht. Die Serversoftware, alle Skripte und Karten sind unter 
-der <a href="http://www.gnu.org/licenses/agpl-3.0">
+der <a href="https://www.gnu.org/licenses/agpl-3.0">
 AGPLv3</a> veröffentlicht.
-Diese Quellen sind somit <a href="http://illarion.org/development/de_opensource.php">
+Diese Quellen sind somit <a href="<?php echo Page::getURL(); ?>/development/de_opensource.php">
 öffentlich einsehbar</a> und verwendbar.</p>
 
 <p>Alle anderen Inhalte von Illarion, das

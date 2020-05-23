@@ -47,7 +47,7 @@ class IllaDateTime {
 			case 5: return (Page::isGerman() ? 'Monat der Liebe' : 'Month of Love'); // Siros
 			case 6: return (Page::isGerman() ? 'Monat der Freigiebigkeit' : 'Month of Generosity'); // Ronas
 			case 7: return (Page::isGerman() ? 'Monat der Opferung' : 'Month of Immolation'); // Bras
-			case 8: return (Page::isGerman() ? 'Monat des Fastens' : 'Month of Abrosia'); // Eldas
+			case 8: return (Page::isGerman() ? 'Monat des Fastens' : 'Month of Abstinence'); // Eldas
 			case 9: return (Page::isGerman() ? 'Monat des Handwerks' : 'Month of Trade'); // Irmas
 			case 10: return (Page::isGerman() ? 'Monat des Jägers' : 'Month of the Hunter'); // Malas
 			case 11: return (Page::isGerman() ? 'Monat der bildenden Künste' : 'Month of Fine Arts'); // Findos
@@ -75,10 +75,9 @@ class IllaDateTime {
 		if ($timestamp === false) {
 			$timestamp = time();
 		}
-		if (!class_exists('User') || !IllaUser::loggedIn()) {
+		if (!class_exists('IllaUser') || !IllaUser::loggedIn()) {
 			return $timestamp;
 		}
-
 		$server_offset = (int)(date('O', time())) / 100;
 		$new_stamp = floor($timestamp - 3600 * ($server_offset - IllaUser::$time_offset));
 		$dst = (int)date('I', $new_stamp);
@@ -103,10 +102,9 @@ class IllaDateTime {
 		if ($timestamp === false) {
 			return time();
 		}
-		if (!class_exists('User') || !IllaUser::loggedIn()) {
+		if (!class_exists('IllaUser') || !IllaUser::loggedIn()) {
 			return $timestamp;
 		}
-
 		$server_offset = (int)(date('O', time())) / 100;
 		$new_stamp = floor($timestamp + 3600 * ($server_offset - IllaUser::$time_offset));
 		$dst = (int)date('I', $new_stamp);
